@@ -1,6 +1,7 @@
 import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/screens/main%20_screee/widgets/carousel_builder.dart';
 import 'package:movfilix/screens/main%20_screee/widgets/movie_list_builder.dart';
+import 'package:movfilix/screens/main%20_screee/widgets/navigate_bar.dart';
 import 'package:movfilix/screens/main%20_screee/widgets/search_builder.dart';
 
 class MainScreen extends StatelessWidget {
@@ -26,10 +27,31 @@ class MainScreen extends StatelessWidget {
               title: "Popular Movies",
               movies: AppConstants.movies,
             ),
-            
+            const SizedBox(
+              height: 20,
+            ),
+            MoviesListBuilder(
+              movies: AppConstants.movies,
+              title: "Action",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            MoviesListBuilder(
+              movies: AppConstants.movies,
+              title: "Continue Watching",
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            MoviesListBuilder(
+              movies: AppConstants.movies,
+              title: "New Releases",
+            ),
           ],
         ),
       ),
+      bottomNavigationBar: const NavigatorBar(),
     );
   }
 }

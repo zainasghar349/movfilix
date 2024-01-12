@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart' show CupertinoPageRoute;
 import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/cache_image.dart';
 import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/models/movie_model.dart';
+import 'package:movfilix/screens/play_screen/play_screen.dart';
 
 class MoviesListBuilder extends StatelessWidget {
   final List<MovieModel> movies;
@@ -48,16 +50,28 @@ class MoviesListBuilder extends StatelessWidget {
             child: Row(
               children: List.generate(
                 movies.length,
-                (index) => Container(
-                  margin: const EdgeInsets.only(right: 10),
-                  height: 140,
-                  width: 100,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(20),
+                (index) => GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (context) => PlayScreen(
+                          url: movies[index].url,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    height: 140,
+                    width: 100,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      color: AppColors.primary.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: CacheImage(url: movies[index].url),
                   ),
-                  child: CacheImage(url: movies[index].url),
                 ),
               ),
             ),

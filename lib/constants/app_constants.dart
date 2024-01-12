@@ -1,4 +1,5 @@
 import 'package:movfilix/models/movie_model.dart';
+import 'package:movfilix/models/play_model.dart';
 
 class AppConstants {
   static const appname = "MovFlix";
@@ -41,4 +42,15 @@ class AppConstants {
           "https://www.bollywoodhungama.com/wp-content/uploads/2023/08/Shah-Rukh-Khan-Vijay-Sethupathi-and-Nayanthara-take-center-stage-in-fiery-new-poster-of-Jawan.jpg",
     ),
   ];
+  static final episodes =<PlayModel>[
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+  ];
+  
 }

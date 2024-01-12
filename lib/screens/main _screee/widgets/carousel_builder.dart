@@ -66,7 +66,7 @@ class CarouselBuilder extends StatelessWidget {
                 Text(
                   movies[cInd].genre,
                   style: TextStyle(
-                      fontSize: 13, color: Colors.white.withOpacity(0.5)),
+                      fontSize: 13, color: Colors.white.withOpacity(0.5),),
                 ),
                 const SizedBox(height: 10),
                 Row(

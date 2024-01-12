@@ -3,7 +3,8 @@ import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/screens/auth/login.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  
+  const HomeScreen({super.key,});
 
   @override
   Widget build(BuildContext context) {
