@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/bg_screen.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
-import 'package:movfilix/constants/app_assets.dart';
-import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/screens/auth/verification_screen.dart';
 
 class ForgetPassScreen extends StatelessWidget {

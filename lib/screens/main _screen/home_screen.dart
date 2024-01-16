@@ -8,47 +8,44 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.secondary,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: 30,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SearchBuilder(),
-            const SizedBox(height: 20),
-            const CarouselBuilder(),
-            const SizedBox(height: 20),
-            MoviesListBuilder(
-              title: "Popular Movies",
-              movies: AppConstants.movies,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MoviesListBuilder(
-              movies: AppConstants.movies,
-              title: "Action",
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MoviesListBuilder(
-              movies: AppConstants.movies,
-              title: "Continue Watching",
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            MoviesListBuilder(
-              movies: AppConstants.movies,
-              title: "New Releases",
-            ),
-          ],
-        ),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 30,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SearchBuilder(),
+          const SizedBox(height: 20),
+          const CarouselBuilder(),
+          const SizedBox(height: 20),
+          MoviesListBuilder(
+            title: "Popular Movies",
+            movies: AppConstants.movies,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          MoviesListBuilder(
+            movies: AppConstants.movies,
+            title: "Action",
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          MoviesListBuilder(
+            movies: AppConstants.movies,
+            title: "Continue Watching",
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          MoviesListBuilder(
+            movies: AppConstants.movies,
+            title: "New Releases",
+          ),
+        ],
       ),
     );
   }
