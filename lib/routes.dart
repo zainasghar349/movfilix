@@ -19,9 +19,40 @@ class RouteScreen extends StatelessWidget {
       ProfileScreen(),
     ];
 
-    return Scaffold(
-      body: Obx(() => screens[navController.index]),
-      bottomNavigationBar: const NavigatorBar(),
-    );
+    final appBars = {
+      1: {
+        'title': "Library",
+        'actions': <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.menu),
+          )
+        ],
+      },
+      2: {'title': "Downlods"},
+      3: {'title': "Profile & Settings"},
+    };
+
+    return Obx(() {
+      final curIndex = navController.index;
+      return PopScope(
+        canPop: curIndex == 0,
+        onPopInvoked: (didPop) {
+          if (curIndex != 0) {
+            navController.changePage(0);
+          }
+        },
+        child: Scaffold(
+          appBar: appBars[curIndex] != null
+              ? AppBar(
+                  title: Text(appBars[curIndex]!['title']! as String),
+                  actions: appBars[curIndex]!['actions'] as List<Widget>?,
+                )
+              : null,
+          body: screens[curIndex],
+          bottomNavigationBar: const NavigatorBar(),
+        ),
+      );
+    });
   }
 }

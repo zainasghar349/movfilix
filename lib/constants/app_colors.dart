@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart' show Color, ColorScheme, ThemeData;
+import 'package:flutter/material.dart'
+    show AppBarTheme, Color, ColorScheme, ThemeData;
 
 class AppColors {
   static const primary = Color(0xFF037CBC);
@@ -12,6 +13,9 @@ class AppColors {
       secondary: secondary,
     ),
     scaffoldBackgroundColor: secondary,
-    
+    appBarTheme: const AppBarTheme(
+      centerTitle: true,
+      backgroundColor: AppColors.secondary,
+    ),
   );
 }

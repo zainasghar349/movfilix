@@ -13,89 +13,81 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Profile & Setting",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(
+          height: 20,
         ),
-        centerTitle: true,
-        backgroundColor: AppColors.secondary,
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 20,
+        Padding(
+          padding: const EdgeInsets.only(right: 20, left: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                clipBehavior: Clip.antiAlias,
+                height: 68,
+                width: 82,
+                decoration: const BoxDecoration(
+                    color: Colors.amber, shape: BoxShape.circle),
+                child: const CacheImage(
+                    url:
+                        "https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_FMjpg_UX1000_.jpg"),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              const Expanded(
+                child: TextfieldComponent(
+                  hintText: "Zain Asghar",
+                  suffixIcon: Icons.edit,
+                ),
+              )
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20, left: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  clipBehavior: Clip.antiAlias,
-                  height: 68,
-                  width: 82,
-                  decoration: const BoxDecoration(
-                      color: Colors.amber, shape: BoxShape.circle),
-                  child: const CacheImage(
-                      url:
-                          "https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_FMjpg_UX1000_.jpg"),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 13, right: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(right: 20, left: 20),
+                child: Text(
+                  "Setting",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xffD1CECE)),
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                const Expanded(
-                  child: TextfieldComponent(
-                    hintText: "Zain Asghar",
-                    suffixIcon: Icons.edit,
-                  ),
-                )
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Notificationsection(),
+              SizedBox(
+                height: 10,
+              ),
+              WatchLaterSection(),
+              SizedBox(
+                height: 10,
+              ),
+              AccountSection(),
+              SizedBox(
+                height: 10,
+              ),
+              HelpSection(),
+              SizedBox(
+                height: 20,
+              ),
+              SignOut(),
+            ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 13, right: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(right: 20, left: 20),
-                  child: Text(
-                    "Setting",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xffD1CECE)),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Notificationsection(),
-                SizedBox(
-                  height: 10,
-                ),
-                WatchLaterSection(),
-                SizedBox(
-                  height: 10,
-                ),
-                AccountSection(),
-                SizedBox(height: 10,),
-                HelpSection(),
-                SizedBox(height: 20,),
-                SignOut(),
-
-              ],
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 }
