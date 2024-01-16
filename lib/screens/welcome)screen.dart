@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/screens/auth/login.dart';
 
-class HomeScreen extends StatelessWidget {
-  
-  const HomeScreen({super.key,});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +37,18 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButton(
-                        onPressed: ()=>Navigator.push(context,MaterialPageRoute(builder: (context) => const LoginScreen(),)),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primary,
-                            fixedSize: const Size.fromWidth(162)),
-                        child: const Text("CONTINUE",
-                            style: TextStyle(color: Colors.white)),
+                      CustomButton(
+                        name: "Login",
+                        ontap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginScreen(),
+                          ),
+                        ),
                       ),
-                      const SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       const Text(
                         "Have you agreed to our ",
                         style: TextStyle(
@@ -52,17 +57,19 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       RichText(
-                          text: const TextSpan(
-                              text: "Terms of Services",
-                              style: TextStyle(color: Color(0xff037CBC)),
-                              children: [
+                        text: const TextSpan(
+                          text: "Terms of Services",
+                          style: TextStyle(color: Color(0xff037CBC)),
+                          children: [
                             TextSpan(
                                 text: ' & ',
                                 style: TextStyle(color: Colors.white)),
                             TextSpan(
                                 text: "Privacy Policy",
                                 style: TextStyle(color: Color(0xff037CBC)))
-                          ]))
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),

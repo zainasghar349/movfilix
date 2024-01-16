@@ -1,5 +1,7 @@
+import 'package:movfilix/models/intro_model.dart';
 import 'package:movfilix/models/movie_model.dart';
 import 'package:movfilix/models/play_model.dart';
+import 'package:movfilix/models/verification_model.dart';
 
 class AppConstants {
   static const appname = "MovFlix";
@@ -10,6 +12,7 @@ class AppConstants {
       genre: "Thriller",
       url:
           "https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_FMjpg_UX1000_.jpg",
+     
     ),
     const MovieModel(
       title: "Hidden Strike",
@@ -42,15 +45,72 @@ class AppConstants {
           "https://www.bollywoodhungama.com/wp-content/uploads/2023/08/Shah-Rukh-Khan-Vijay-Sethupathi-and-Nayanthara-take-center-stage-in-fiery-new-poster-of-Jawan.jpg",
     ),
   ];
-  static final episodes =<PlayModel>[
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
-    const PlayModel(url: "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg", title: "1. The Energy of Lov", duration: "57 MIN"),
+  static final episodes = <PlayModel>[
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "2. Sex bacho ki pouch se ",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
+    const PlayModel(
+      url:
+          "https://static.displate.com/392x280/displate/2022-09-05/67f549944a390c766fd186979ddb0f97_76ae2aa56db908b08a17c67a7371903a.jpg",
+      title: "1. The Energy of Lov",
+      duration: "57 MIN",
+    ),
   ];
-  
+  static final introModelList = <IntroModel>[
+    const IntroModel(
+        duration: "1H 52MIN",
+        release: "2012",
+        rated: "13+",
+        episodes: "8 Episodes",
+        discription:
+            "Among the palaces and paris and his gang to stea. ultrices quis and having fun with others it was good experience",
+        cast: "")
+  ];
+  static final verification=[
+    VerificationModel(number: "7"),
+    VerificationModel(number: "7"),
+    VerificationModel(number: "1"),
+    VerificationModel(number: "3"),
+
+
+  ];
 }

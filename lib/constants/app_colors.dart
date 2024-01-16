@@ -11,5 +11,7 @@ class AppColors {
       primary: primary,
       secondary: secondary,
     ),
+    scaffoldBackgroundColor: secondary,
+    
   );
 }

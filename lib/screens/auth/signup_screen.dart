@@ -5,6 +5,8 @@ import 'package:movfilix/constants/app_assets.dart';
 import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/constants/app_fonts.dart';
 
+import '../main _screen/home_screen.dart';
+
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
@@ -84,7 +86,12 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const CustomButton(name: "Sign Up"),
+                   CustomButton(name: "Sign Up",  ontap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()));
+                    },),
                   const SizedBox(
                     height: 20,
                   ),

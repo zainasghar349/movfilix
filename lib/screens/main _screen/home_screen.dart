@@ -1,11 +1,10 @@
 import 'package:movfilix/constants/exports.dart';
-import 'package:movfilix/screens/main%20_screee/widgets/carousel_builder.dart';
-import 'package:movfilix/screens/main%20_screee/widgets/movie_list_builder.dart';
-import 'package:movfilix/screens/main%20_screee/widgets/navigate_bar.dart';
-import 'package:movfilix/screens/main%20_screee/widgets/search_builder.dart';
+import 'package:movfilix/screens/main%20_screen/widgets/carousel_builder.dart';
+import 'package:movfilix/screens/main%20_screen/widgets/movie_list_builder.dart';
+import 'package:movfilix/screens/main%20_screen/widgets/search_builder.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,6 @@ class MainScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const NavigatorBar(),
     );
   }
 }

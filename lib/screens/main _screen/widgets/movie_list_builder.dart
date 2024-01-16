@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/cache_image.dart';
 import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/models/movie_model.dart';
-import 'package:movfilix/screens/play_screen/play_screen.dart';
+import 'package:movfilix/screens/detail_screen/detail_screen.dart';
 
 class MoviesListBuilder extends StatelessWidget {
   final List<MovieModel> movies;
@@ -55,7 +55,7 @@ class MoviesListBuilder extends StatelessWidget {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                        builder: (context) => PlayScreen(
+                        builder: (context) => DetailScreen(
                           url: movies[index].url,
                         ),
                       ),

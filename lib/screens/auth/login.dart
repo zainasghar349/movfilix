@@ -4,6 +4,8 @@ import 'package:movfilix/common_widgets/textfield_components.dart';
 import 'package:movfilix/constants/app_assets.dart';
 import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/constants/app_fonts.dart';
+import 'package:movfilix/routes.dart';
+import 'package:movfilix/screens/auth/forget_pass_screen.dart';
 import 'package:movfilix/screens/auth/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -68,20 +70,35 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const TextfieldComponent(hintText: "Password",suffixIcon: Icons.visibility_off,),
+                  const TextfieldComponent(
+                    hintText: "Password",
+                    suffixIcon: Icons.visibility_off,
+                  ),
                   const SizedBox(
                     height: 10,
                   ),
                   Align(
                     alignment: Alignment.bottomRight,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ForgetPassScreen(),
+                          )),
                       child: const Text(
                         "Forget Password",
                       ),
                     ),
                   ),
-                  const CustomButton(name: "Login"),
+                  CustomButton(
+                    name: "Login",
+                    ontap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RouteScreen()));
+                    },
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
