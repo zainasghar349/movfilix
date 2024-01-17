@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart' show CupertinoPageRoute;
-import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/cache_image.dart';
-import 'package:movfilix/constants/app_colors.dart';
+import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/models/movie_model.dart';
-import 'package:movfilix/screens/detail_screen/detail_screen.dart';
+import 'package:movfilix/constants/app_routes.dart';
 
 class MoviesListBuilder extends StatelessWidget {
   final List<MovieModel> movies;
@@ -18,6 +16,7 @@ class MoviesListBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Column(
       children: <Widget>[
         Row(
@@ -31,7 +30,7 @@ class MoviesListBuilder extends StatelessWidget {
             ),
             const Spacer(),
             TextButton(
-              onPressed: onTap,
+              onPressed: ()=>Get.toNamed(AppRoutes.seeAllScreen),
               child: const Text("See all"),
             ),
           ],
@@ -51,16 +50,9 @@ class MoviesListBuilder extends StatelessWidget {
               children: List.generate(
                 movies.length,
                 (index) => GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => DetailScreen(
-                          url: movies[index].url,
-                        ),
-                      ),
-                    );
-                  },
+                  onTap: ()=>Get.toNamed(AppRoutes.detailScreen, arguments: movies[index].url) 
+                    
+                  ,
                   child: Container(
                     margin: const EdgeInsets.only(right: 10),
                     height: 140,

@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/bg_screen.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
-import 'package:movfilix/screens/auth/verification_screen.dart';
+import 'package:movfilix/constants/exports.dart';
+import 'package:movfilix/constants/app_routes.dart';
 
 class ForgetPassScreen extends StatelessWidget {
   const ForgetPassScreen({super.key});
@@ -42,11 +42,8 @@ class ForgetPassScreen extends StatelessWidget {
               ),
               CustomButton(
                   name: "Continue",
-                  ontap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const VarificationScreen(),
-                      )))
+                  ontap: () => Get.toNamed(AppRoutes.verificationScreen),
+              )
             ],
           ),
         ),

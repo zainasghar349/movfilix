@@ -2,8 +2,8 @@ import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/controllers/navigation.controller.dart';
 import 'package:movfilix/screens/detail_screen/download_screen.dart';
 import 'package:movfilix/screens/library/library_screen.dart';
-import 'package:movfilix/screens/main%20_screen/home_screen.dart';
-import 'package:movfilix/screens/main%20_screen/widgets/navigate_bar.dart';
+import 'package:movfilix/screens/home%20_screen/home_screen.dart';
+import 'package:movfilix/screens/home%20_screen/widgets/navigate_bar.dart';
 import 'package:movfilix/screens/profile_screen/profile_screen.dart';
 
 class RouteScreen extends StatelessWidget {
@@ -26,7 +26,7 @@ class RouteScreen extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.menu),
-          )
+          ),
         ],
       },
       2: {'title': "Downlods"},

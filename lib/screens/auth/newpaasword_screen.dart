@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/bg_screen.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
+import 'package:movfilix/constants/app_routes.dart';
+import 'package:movfilix/constants/exports.dart';
 
-import '../main _screen/home_screen.dart';
 
 class NewPasswordScreen extends StatelessWidget {
   const NewPasswordScreen({super.key});
@@ -27,10 +27,7 @@ class NewPasswordScreen extends StatelessWidget {
               const TextfieldComponent(hintText: "Confirm Password"),
               const SizedBox(height: 30,),
               CustomButton(name: "Reset Password",  ontap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomeScreen()));
+                     Get.toNamed(AppRoutes.loginScreen);
                     },),
             ],
           ),

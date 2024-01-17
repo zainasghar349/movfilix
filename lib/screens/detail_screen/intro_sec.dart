@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:movfilix/constants/app_constants.dart';
-import 'package:movfilix/screens/detail_screen/download_screen.dart';
-import 'package:movfilix/screens/detail_screen/watch_later.dart';
+import 'package:movfilix/constants/exports.dart';
+import 'package:movfilix/constants/app_routes.dart';
 
 class IntroSection extends StatelessWidget {
   const IntroSection({super.key});
@@ -55,19 +53,14 @@ class IntroSection extends StatelessWidget {
             ),
             const Spacer(),
             IconButton(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const WatchLater(),
-                ),
-              ),
+              onPressed: () => Get.toNamed(AppRoutes.watchLaterScreen),
               icon: const Icon(
                 Icons.add,
                 size: 35,
               ),
             ),
             IconButton(
-              onPressed: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => const DownloadScreen(),)) ,
+              onPressed: () => Get.toNamed(AppRoutes.downloadScreen),
               icon: const Icon(
                 Icons.download,
                 size: 27,

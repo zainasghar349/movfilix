@@ -1,11 +1,9 @@
 import 'package:movfilix/common_widgets/cache_image.dart';
+import 'package:movfilix/common_widgets/profile_widgets.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
 import 'package:movfilix/constants/exports.dart';
-import 'package:movfilix/screens/profile_screen/widgets/account.dart';
-import 'package:movfilix/screens/profile_screen/widgets/help.dart';
-import 'package:movfilix/screens/profile_screen/widgets/notification.dart';
-import 'package:movfilix/screens/profile_screen/widgets/sign_out.dart';
-import 'package:movfilix/screens/profile_screen/widgets/watch_later_sec.dart';
+import 'package:movfilix/controllers/switch_controller.dart';
+import 'package:movfilix/constants/app_routes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -13,6 +11,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SwitchContorller());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -49,12 +48,12 @@ class ProfileScreen extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 13, right: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 13, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(right: 20, left: 20),
                 child: Text(
                   "Setting",
@@ -64,26 +63,54 @@ class ProfileScreen extends StatelessWidget {
                       color: Color(0xffD1CECE)),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Notificationsection(),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              WatchLaterSection(),
-              SizedBox(
-                height: 10,
+              ProfileWidgets(
+                icons: Icons.notifications_outlined,
+                title: "Notications",
+                tralling: Obx(
+                  () => Switch(
+                    value: controller.index.value,
+                    onChanged: (value) {
+                      controller.index.value = value;
+                    },
+                  ),
+                ),
               ),
-              AccountSection(),
-              SizedBox(
-                height: 10,
+              Divider(
+                height: 0.0,
+                color: Colors.white.withOpacity(0.2),
               ),
-              HelpSection(),
-              SizedBox(
-                height: 20,
+              InkWell(
+                onTap: () => Get.toNamed(AppRoutes.watchLaterScreen),
+                child: const ProfileWidgets(
+                    icons: Icons.add, title: "Watch Later"),
               ),
-              SignOut(),
+              Divider(
+                height: 0.0,
+                color: Colors.white.withOpacity(0.2),
+              ),
+              InkWell(
+                  onTap: () => Get.toNamed(AppRoutes.accountDetailChange),
+                        
+                      
+                  child: const ProfileWidgets(
+                      icons: Icons.person, title: "Account")),
+              Divider(
+                height: 0.0,
+                color: Colors.white.withOpacity(0.2),
+              ),
+              const ProfileWidgets(icons: Icons.help, title: "help"),
+              Divider(
+                height: 0.0,
+                color: Colors.white.withOpacity(0.2),
+              ),
+              const ProfileWidgets(icons: Icons.logout, title: "Signout"),
+              Divider(
+                height: 0.0,
+                color: Colors.white.withOpacity(0.2),
+              ),
             ],
           ),
         )

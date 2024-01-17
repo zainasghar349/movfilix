@@ -1,11 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
-import 'package:movfilix/constants/app_assets.dart';
-import 'package:movfilix/constants/app_colors.dart';
-import 'package:movfilix/constants/app_fonts.dart';
+import 'package:movfilix/constants/exports.dart';
 
-import '../main _screen/home_screen.dart';
+import '../home _screen/home_screen.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -100,7 +97,7 @@ class SignupScreen extends StatelessWidget {
                     children: [
                       const Text("Already have an account?"),
                       TextButton(
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () => Get.back(),
                         child: const Text("Log in"),
                       )
                     ],

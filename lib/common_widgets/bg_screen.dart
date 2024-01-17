@@ -6,9 +6,14 @@ import 'package:movfilix/constants/app_colors.dart';
 class BackgroundScreen extends StatelessWidget {
   final Widget child;
   final String bgpath;
-  final bool isBackArrow ;   
+  final bool isBackArrow;
 
-  const BackgroundScreen({super.key, required this.child, this.bgpath = "", this.isBackArrow= false });
+  const BackgroundScreen({
+    super.key,
+    required this.child,
+    this.bgpath = "",
+    this.isBackArrow = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -44,15 +49,17 @@ class BackgroundScreen extends StatelessWidget {
               ],
             ),
           ),
-          child: child,
+          child: SafeArea(child: child),
         ),
-        if(isBackArrow)
-        Positioned(
-          top: 20,
-          
-          child:IconButton(onPressed: ()=>Navigator.pop(context), icon: const Icon(Icons.arrow_back)) )
+        if (isBackArrow)
+          Positioned(
+            top: 20,
+            child: IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.arrow_back),
+            ),
+          )
       ],
-
     );
   }
 }

@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
-import 'package:movfilix/constants/app_colors.dart';
-import 'package:movfilix/screens/auth/login.dart';
+import 'package:movfilix/constants/exports.dart';
+import 'package:movfilix/constants/app_routes.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({
@@ -38,13 +37,8 @@ class WelcomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomButton(
-                        name: "Login",
-                        ontap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginScreen(),
-                          ),
-                        ),
+                        name: "Continue",
+                        ontap: () => Get.toNamed(AppRoutes.loginScreen),
                       ),
                       const SizedBox(
                         height: 10,

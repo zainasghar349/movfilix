@@ -1,16 +1,18 @@
 import 'package:movfilix/constants/exports.dart';
-import 'package:movfilix/screens/main%20_screen/widgets/carousel_builder.dart';
-import 'package:movfilix/screens/main%20_screen/widgets/movie_list_builder.dart';
-import 'package:movfilix/screens/main%20_screen/widgets/search_builder.dart';
+import 'package:movfilix/screens/home%20_screen/widgets/carousel_builder.dart';
+import 'package:movfilix/screens/home%20_screen/widgets/movie_list_builder.dart';
+import 'package:movfilix/screens/home%20_screen/widgets/search_builder.dart';
+import 'package:movfilix/screens/home%20_screen/widgets/see_all.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  
+  const HomeScreen({super.key, });
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(
-        horizontal: 15,
+        horizontal: 15, 
         vertical: 30,
       ),
       child: Column(
@@ -23,6 +25,7 @@ class HomeScreen extends StatelessWidget {
           MoviesListBuilder(
             title: "Popular Movies",
             movies: AppConstants.movies,
+            onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => const SeeAllScreen(),)),
           ),
           const SizedBox(
             height: 20,
