@@ -18,7 +18,7 @@ class SearchBuilder extends StatelessWidget {
             ),
           ),
           subtitle: const Text("Let's relax & watch a movie!"),
-          trailing: const Icon(Icons.menu),
+          trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.menu))
         ),
         const SizedBox(height: 10),
         const TextfieldComponent(

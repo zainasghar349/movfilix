@@ -2,7 +2,6 @@ import 'package:movfilix/common_widgets/bg_screen.dart';
 import 'package:movfilix/common_widgets/custom_button.dart';
 import 'package:movfilix/constants/app_routes.dart';
 import 'package:movfilix/constants/exports.dart';
-import 'package:movfilix/screens/auth/newpaasword_screen.dart';
 
 class VarificationScreen extends StatelessWidget {
   const VarificationScreen({super.key});

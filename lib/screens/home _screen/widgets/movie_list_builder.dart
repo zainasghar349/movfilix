@@ -16,7 +16,6 @@ class MoviesListBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Column(
       children: <Widget>[
         Row(
@@ -30,7 +29,7 @@ class MoviesListBuilder extends StatelessWidget {
             ),
             const Spacer(),
             TextButton(
-              onPressed: ()=>Get.toNamed(AppRoutes.seeAllScreen),
+              onPressed: () => Get.toNamed(AppRoutes.seeAllScreen,arguments:{"title":title,"movies":movies},),
               child: const Text("See all"),
             ),
           ],
@@ -50,9 +49,8 @@ class MoviesListBuilder extends StatelessWidget {
               children: List.generate(
                 movies.length,
                 (index) => GestureDetector(
-                  onTap: ()=>Get.toNamed(AppRoutes.detailScreen, arguments: movies[index].url) 
-                    
-                  ,
+                  onTap: () => Get.toNamed(AppRoutes.detailScreen,
+                      arguments: movies[index].url),
                   child: Container(
                     margin: const EdgeInsets.only(right: 10),
                     height: 140,

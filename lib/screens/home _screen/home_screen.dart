@@ -2,7 +2,6 @@ import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/screens/home%20_screen/widgets/carousel_builder.dart';
 import 'package:movfilix/screens/home%20_screen/widgets/movie_list_builder.dart';
 import 'package:movfilix/screens/home%20_screen/widgets/search_builder.dart';
-import 'package:movfilix/screens/home%20_screen/widgets/see_all.dart';
 
 class HomeScreen extends StatelessWidget {
   
@@ -25,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           MoviesListBuilder(
             title: "Popular Movies",
             movies: AppConstants.movies,
-            onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => const SeeAllScreen(),)),
+            onTap: (){},
           ),
           const SizedBox(
             height: 20,

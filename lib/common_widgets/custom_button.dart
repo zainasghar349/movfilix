@@ -4,15 +4,18 @@ import 'package:movfilix/constants/app_colors.dart';
 class CustomButton extends StatelessWidget {
   final String name;
   final Function() ontap;
-  const CustomButton({super.key, required this.name, required this.ontap});
+  final double size;
+  final Color color;
+  const CustomButton({super.key, required this.name, required this.ontap, this.size=162, this.color=AppColors.primary});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: ontap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
-        fixedSize: const Size.fromWidth(162),
+        
+        backgroundColor:color ,
+        fixedSize: Size.fromWidth(size),
       ),
       child: Text(
         name,

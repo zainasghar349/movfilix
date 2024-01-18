@@ -45,7 +45,7 @@ class IntroSection extends StatelessWidget {
         Row(
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: ()=>Get.toNamed(AppRoutes.videoApp),
               icon: const Icon(
                 Icons.play_circle_outline,
                 size: 50,

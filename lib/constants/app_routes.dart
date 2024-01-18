@@ -13,6 +13,8 @@ import 'package:movfilix/screens/home%20_screen/widgets/see_all.dart';
 import 'package:movfilix/screens/library/library_screen.dart';
 import 'package:movfilix/screens/profile_screen/profile_screen.dart';
 import 'package:movfilix/screens/profile_screen/widgets/account_detail_change.dart';
+import 'package:movfilix/screens/profile_screen/widgets/showdialog.dart';
+import 'package:movfilix/screens/video_player/video_player.dart';
 import 'package:movfilix/screens/welcome_screen.dart';
 
 class AppRoutes {
@@ -31,6 +33,8 @@ class AppRoutes {
   static const String profileScreen = '/ProfileScreen';
   static const String accountDetailChange = '/AccountDetailChange';
   static const String seeAllScreen = '/SeeAllScreen';
+  static const String showDialog = '/ShowDialog';
+  static const String videoApp = '/VideoPlayerCustomize';
 
 
   static final routes = <GetPage>[
@@ -93,6 +97,14 @@ class AppRoutes {
     GetPage(
       name: seeAllScreen,
       page: () => const SeeAllScreen(),
+    ),
+    GetPage(
+      name: showDialog,
+      page: () => const ShowDialog(),
+    ),
+    GetPage(
+      name: videoApp,
+      page: () => const VideoPlayerCustomize(),
     ),
   ];
 }
