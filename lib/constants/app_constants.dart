@@ -1,3 +1,4 @@
+import 'package:movfilix/models/action_model.dart';
 import 'package:movfilix/models/intro_model.dart';
 import 'package:movfilix/models/movie_model.dart';
 import 'package:movfilix/models/play_model.dart';
@@ -12,7 +13,6 @@ class AppConstants {
       genre: "Thriller",
       url:
           "https://m.media-amazon.com/images/M/MV5BMDRjYWI5NTMtZTYzZC00NTg4LWI3NjMtNmI3MTdhMWQ5MGJlXkEyXkFqcGdeQXVyNTg4MDc4Mg@@._V1_FMjpg_UX1000_.jpg",
-     
     ),
     const MovieModel(
       title: "Hidden Strike",
@@ -105,12 +105,25 @@ class AppConstants {
             "Among the palaces and paris and his gang to stea. ultrices quis and having fun with others it was good experience",
         cast: "")
   ];
-  static final verification=[
+  static final verification = [
     VerificationModel(number: "7"),
     VerificationModel(number: "7"),
     VerificationModel(number: "1"),
     VerificationModel(number: "3"),
-
-
+  ];
+  static final actionList = <ActionModel>[
+    ActionModel(
+        url:
+            "https://i.pinimg.com/564x/ad/fe/af/adfeaf885913d9798ee3818ac3bf2f85.jpg"),
+    ActionModel(
+        url:
+            "https://i.pinimg.com/564x/35/2d/c5/352dc5a927214801bde72cfa30eec5a2.jpg"),
+    ActionModel(url: "https://www.pinterest.com/pin/518899188319491316/"),
+    ActionModel(
+        url:
+            "https://i.pinimg.com/736x/c0/4a/54/c04a54848540c5c933ed49c2fbe8efe3.jpg"),
+    ActionModel(
+        url:
+            "https://i.pinimg.com/736x/27/3b/78/273b78a62679a2eb56d59d9d0e6e2d46.jpg")
   ];
 }

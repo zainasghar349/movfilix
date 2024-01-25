@@ -39,7 +39,7 @@ dependencies:
   get: ^4.6.6
   cached_network_image: ^3.3.1
   video_player: ^2.8.2
-  lecle_yoyo_player: ^0.0.8
+  
 
 dev_dependencies:
   flutter_test:

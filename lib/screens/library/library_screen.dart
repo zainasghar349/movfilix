@@ -1,4 +1,5 @@
 import 'package:movfilix/common_widgets/cache_image.dart';
+import 'package:movfilix/constants/app_routes.dart';
 import 'package:movfilix/constants/exports.dart';
 // import 'package:movfilix/screens/library/widgets/movies_sec.dart';
 // import 'package:movfilix/screens/library/widgets/tv_shows.dart';
@@ -53,12 +54,15 @@ class _LibraryScreenState extends State<LibraryScreen>
                 ),
                 itemBuilder: (context, index) {
                   final movie = AppConstants.movies[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.amber,
+                  return InkWell(
+                    onTap: () => Get.toNamed(AppRoutes.detailScreen,arguments:movie.url ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.amber,
+                      ),
+                      child: CacheImage(url: movie.url),
                     ),
-                    child: CacheImage(url: movie.url),
                   );
                 },
               ),
@@ -73,12 +77,15 @@ class _LibraryScreenState extends State<LibraryScreen>
                 ),
                 itemBuilder: (context, index) {
                   final movie = AppConstants.movies[index];
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.amber,
+                  return InkWell(
+                    onTap: () => Get.toNamed(AppRoutes.detailScreen,arguments:movie.url ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.amber,
+                      ),
+                      child: CacheImage(url: movie.url),
                     ),
-                    child: CacheImage(url: movie.url),
                   );
                 },
               ),
