@@ -8,7 +8,7 @@ import 'package:movfilix/screens/home%20_screen/widgets/navigate_bar.dart';
 import 'package:movfilix/screens/profile_screen/profile_screen.dart';
 
 class RouteScreen extends StatelessWidget {
-  const RouteScreen({super.key});
+  const RouteScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

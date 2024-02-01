@@ -2,7 +2,7 @@ import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/constants/app_routes.dart';
 
 class IntroSection extends StatelessWidget {
-  const IntroSection({super.key});
+  const IntroSection({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

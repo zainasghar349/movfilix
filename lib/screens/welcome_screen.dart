@@ -4,8 +4,8 @@ import 'package:movfilix/constants/app_routes.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({
-    super.key,
-  });
+    Key?key,
+  }):super(key: key);
 
   @override
   Widget build(BuildContext context) {

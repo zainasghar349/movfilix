@@ -7,7 +7,7 @@ import 'package:movfilix/controllers/movie_controller.dart';
 import 'package:movfilix/screens/home%20_screen/widgets/animated_movie_card.dart';
 
 class CarouselBuilder extends StatelessWidget {
-  const CarouselBuilder({super.key});
+  const CarouselBuilder({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

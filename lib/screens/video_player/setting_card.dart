@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SettingsCard extends StatelessWidget {
   final Widget child;
-  const SettingsCard({super.key, required this.child});
+  const SettingsCard({Key?key, required this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

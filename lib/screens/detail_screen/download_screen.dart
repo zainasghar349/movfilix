@@ -1,7 +1,7 @@
 import 'package:movfilix/constants/exports.dart';
 
 class DownloadScreen extends StatelessWidget {
-  const DownloadScreen({super.key});
+  const DownloadScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

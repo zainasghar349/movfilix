@@ -6,7 +6,7 @@ import 'package:movfilix/screens/detail_screen/similar_sec.dart';
 
 class DetailScreen extends StatelessWidget {
   
-  const DetailScreen({super.key});
+  const DetailScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       body: BackgroundScreen(
         isBackArrow: true,
-        bgpath: Get.arguments,
+        bgpath: Get.arguments as String? ?? "",
         child: SingleChildScrollView(
           padding: EdgeInsets.only(left: 20, right: 20, top: size.height * 0.4),
           child: const Column(

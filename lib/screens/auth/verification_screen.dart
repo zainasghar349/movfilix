@@ -4,7 +4,7 @@ import 'package:movfilix/constants/app_routes.dart';
 import 'package:movfilix/constants/exports.dart';
 
 class VarificationScreen extends StatelessWidget {
-  const VarificationScreen({super.key});
+  const VarificationScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

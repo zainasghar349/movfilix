@@ -6,10 +6,11 @@ class AnimatedMovieCard extends StatelessWidget {
   final double index;
   final String url;
   const AnimatedMovieCard({
-    super.key,
+    Key?key,
     required this.index,
     required this.url,
-  });
+  }
+  ): super(key: key);
 
   @override
   Widget build(BuildContext context) {

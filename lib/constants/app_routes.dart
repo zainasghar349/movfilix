@@ -35,6 +35,7 @@ class AppRoutes {
   static const String seeAllScreen = '/SeeAllScreen';
   static const String showDialog = '/ShowDialog';
   static const String videoApp = '/MyVideoPlayer';
+ 
 
 
   static final routes = <GetPage>[
@@ -106,5 +107,7 @@ class AppRoutes {
       name: videoApp,
       page: () => const MyVideoPlayer(),
     ),
+    
+    
   ];
 }

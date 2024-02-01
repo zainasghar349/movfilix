@@ -3,7 +3,7 @@ import 'package:movfilix/common_widgets/cache_image.dart';
 import 'package:movfilix/constants/app_constants.dart';
 
 class EpisodesSection extends StatelessWidget {
-  const EpisodesSection({super.key});
+  const EpisodesSection({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

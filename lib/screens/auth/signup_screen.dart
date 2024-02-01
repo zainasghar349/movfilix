@@ -5,7 +5,7 @@ import 'package:movfilix/constants/exports.dart';
 import '../home _screen/home_screen.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+  const SignupScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:movfilix/constants/exports.dart';
 import 'package:movfilix/constants/app_routes.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(context) {

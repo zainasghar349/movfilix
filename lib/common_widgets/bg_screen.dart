@@ -9,11 +9,11 @@ class BackgroundScreen extends StatelessWidget {
   final bool isBackArrow;
 
   const BackgroundScreen({
-    super.key,
+    Key? key,
     required this.child,
     this.bgpath = "",
     this.isBackArrow = false,
-  });
+  }):super(key: key);
 
   @override
   Widget build(BuildContext context) {

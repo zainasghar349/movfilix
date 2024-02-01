@@ -3,7 +3,7 @@ import 'package:movfilix/common_widgets/cache_image.dart';
 import 'package:movfilix/constants/app_constants.dart';
 
 class TvShowScreen extends StatelessWidget {
-  const TvShowScreen({super.key});
+  const TvShowScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

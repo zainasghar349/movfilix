@@ -3,9 +3,7 @@ import 'package:movfilix/constants/exports.dart';
 
 class SeeAllScreen extends StatelessWidget {
  
-  const SeeAllScreen({
-    super.key,
-  });
+  const SeeAllScreen({Key? key,}) : super(key: key);
   
 
   @override

@@ -6,12 +6,12 @@ class DrawerTextButtons extends StatelessWidget {
   final double padding;
   final Function() ontap;
   const DrawerTextButtons({
-    super.key,
+    Key?key,
     required this.title,
     this.size = 14,
     this.padding = 18,
     required this.ontap,
-  });
+  }):super(key: key);
 
   @override
   Widget build(BuildContext context) {

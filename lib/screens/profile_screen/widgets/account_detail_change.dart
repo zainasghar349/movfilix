@@ -3,7 +3,7 @@ import 'package:movfilix/common_widgets/textfield_components.dart';
 import 'package:movfilix/constants/exports.dart';
 
 class AccountDetailScreen extends StatelessWidget {
-  const AccountDetailScreen({super.key});
+  const AccountDetailScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,8 @@ class AccountDetailScreen extends StatelessWidget {
             const TextfieldComponent(hintText: "Change Email"),
             const SizedBox(height: 20,),
             const TextfieldComponent(hintText: "Change Password"),
-            const SizedBox(height: 40,),
+            const SizedBox(height: 40
+            ,),
             CustomButton(name: "Save", ontap:()=> Navigator.pop(context))
           ],
         ),

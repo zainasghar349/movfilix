@@ -4,7 +4,7 @@ import 'package:movfilix/constants/app_colors.dart';
 import 'package:movfilix/constants/app_constants.dart';
 
 class WatchLater extends StatelessWidget {
-  const WatchLater({super.key});
+  const WatchLater({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

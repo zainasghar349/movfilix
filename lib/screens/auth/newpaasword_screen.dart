@@ -6,8 +6,7 @@ import 'package:movfilix/constants/exports.dart';
 
 
 class NewPasswordScreen extends StatelessWidget {
-  const NewPasswordScreen({super.key});
-
+  const NewPasswordScreen({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

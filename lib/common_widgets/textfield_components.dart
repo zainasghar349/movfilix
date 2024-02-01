@@ -6,12 +6,12 @@ class TextfieldComponent extends StatelessWidget {
   final IconData? suffixIcon;
   final IconData? preficIcon;
   const TextfieldComponent({
-    super.key,
+    Key?key,
     required this.hintText,
     this.borderRadius = 30,
     this.suffixIcon,
     this.preficIcon,
-  });
+  }):super(key: key);
 
   @override
   Widget build(BuildContext context) {

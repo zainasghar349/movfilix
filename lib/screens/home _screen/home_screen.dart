@@ -5,7 +5,7 @@ import 'package:movfilix/screens/home%20_screen/widgets/search_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   
-  const HomeScreen({super.key, });
+  const HomeScreen({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

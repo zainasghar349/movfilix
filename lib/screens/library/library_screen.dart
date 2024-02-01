@@ -5,7 +5,7 @@ import 'package:movfilix/constants/exports.dart';
 // import 'package:movfilix/screens/library/widgets/tv_shows.dart';
 
 class LibraryScreen extends StatefulWidget {
-  const LibraryScreen({super.key});
+  const LibraryScreen({Key? key,}) : super(key: key);
 
   @override
   State<LibraryScreen> createState() => _LibraryScreenState();

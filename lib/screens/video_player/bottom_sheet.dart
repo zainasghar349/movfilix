@@ -7,11 +7,11 @@ class BottomSheetComponent extends StatelessWidget {
   final List<VideoSettingsModel> list;
   final Function(VideoSettingsModel setting) onActive;
   const BottomSheetComponent({
-    super.key,
+    Key?key,
     required this.title,
     required this.list,
     required this.onActive,
-  });
+  }): super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,7 @@ class BottomSheetComponent extends StatelessWidget {
                 onTap: () => onActive(setting),
                 leading: Icon(setting.icon),
                 title: Text(setting.title),
+                
               );
             }),
           ),

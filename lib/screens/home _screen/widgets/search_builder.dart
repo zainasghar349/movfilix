@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movfilix/common_widgets/textfield_components.dart';
 
 class SearchBuilder extends StatelessWidget {
-  const SearchBuilder({super.key});
+  const SearchBuilder({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

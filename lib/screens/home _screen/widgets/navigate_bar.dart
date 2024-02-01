@@ -3,7 +3,7 @@ import 'package:movfilix/controllers/navigation.controller.dart';
 import 'package:movfilix/models/nav_button_model.dart';
 
 class NavigatorBar extends StatelessWidget {
-  const NavigatorBar({super.key});
+  const NavigatorBar({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

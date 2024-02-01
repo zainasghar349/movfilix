@@ -7,7 +7,7 @@ import 'package:movfilix/controllers/switch_controller.dart';
 import 'package:movfilix/constants/app_routes.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  const ProfileScreen({Key? key,}) : super(key: key);
   void _showSignOutDialog() {
     Get.dialog(
       AlertDialog(
